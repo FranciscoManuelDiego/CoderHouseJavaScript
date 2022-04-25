@@ -14,9 +14,9 @@ body {
 
 h1 {
     font-size: 3em;
-     text-align: center;
-     padding: 1em;
-     font-weight: 400;
+    text-align: center;
+    padding: 1em;
+    font-weight: 400;
 }
 
 p {
@@ -24,4 +24,8 @@ p {
     text-align: center;
     padding: 1em;
     font-weight: 200;
+}
+
+.increase {
+    font-size: 2.50em;
 }
