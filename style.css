@@ -1,26 +1,29 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Play&family=Poppins:ital,wght@0,700;1,700&family=Ropa+Sans&display=swap');
-
+/* Aspectos Generales */
 * {
-    margin: 0.10%;
+    margin: 0;
     padding: 0;
-    color: white;
+    color: whitesmoke;
     font-family: 'Play', sans-serif;
 }
 
+
+
 body {
     background-color: #1f2227;
+    
 }
 
 h1 {
-    font-size: 3em;
+    font-size: 2em;
     text-align: center;
     padding: 1em;
     font-weight: 400;
 }
 
 p {
-    font-size: 2.30em;
+    font-size: 1em;
     text-align: center;
     padding: 1em;
     font-weight: 200;
@@ -29,3 +32,228 @@ p {
 .increase {
     font-size: 2.50em;
 }
+/* Fin de Aspectos Generales */
+
+/* Contenido navbar  */
+
+i {
+    color: white;
+}
+
+ul li {
+    list-style: none;
+}
+
+ul li a {
+    text-decoration: none;
+    font-size: 1.10em;
+    list-style: none;
+    font-weight: 600;
+}
+
+header {
+    background: linear-gradient(20deg, #f20085 0,#c4caef 98%);
+    width: 100%;
+    opacity: 92%;
+}
+
+.header_navbar ul {
+    display: flex;
+    padding: 1em;
+    width: 100%;
+}
+
+.header_navbar ul li {
+    display: inline-flex;
+    padding-left: 5%;
+    margin-left: 8%;
+}
+
+ul li a:hover {
+    border-bottom: solid white 0.10em;
+    border-radius: 1%;
+}
+
+.header_navbar ul li a i {
+    margin-right: -1%;
+    padding: 0.20em;
+    font-size: 1em;
+}
+
+/* fin de seccion navbar */
+
+/* Contenido Grid */
+.body {  display: grid;
+    grid-template-columns: 50% 50% 50%;
+    grid-template-rows: 6% 80% 21%;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header header "
+      "main main "
+      "footer footer ";
+  }
+  
+  .header { grid-area: header; }
+  
+  .main { grid-area: main; }
+  
+  .footer { grid-area: footer; }
+  
+/* Fin de contanido Grid */
+
+/* Inicio de Main */
+.main_productos {
+    display: inline-flex;
+    margin-right: 2%;
+    margin-left: 2%;
+    margin-top: 2%;
+    padding: 1%;
+    height: 400px;
+    width:  250px;
+    border-radius: 5%;
+    box-shadow: 0 40px 70px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 3px solid rgb(29, 31, 35);
+    background: rgb(53, 57, 65);
+    opacity: 95%;
+}
+
+.main_productos_elementos  {
+    position: absolute;
+    text-align: center;
+}
+
+.btn {
+    position: relative;
+    top: 90%;
+    right: -55%;
+    height: 8%;
+    width: 45%;
+    background: linear-gradient(20deg, #f20085 0,#c4caef 98%);
+    border-radius: 10%;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.btn:hover {
+    transition-delay: 1s;
+    background: linear-gradient(20deg, #be056a 0,#abb0cf 98%);
+}
+/* Fin de main */
+
+/* Inicio de footer */
+.footer {
+    display: flex;
+    width: 105%;
+    background: linear-gradient(20deg, #f20085 0,#c4caef 98%);
+    opacity: 92%;
+    justify-items: center;
+}
+
+h2, h3, h4, h5  {
+    font-size: 1.30em ;
+    text-align: center;
+    padding: 1em;
+    font-weight: 600;
+}
+
+.seccion_footer {
+    display: inline-flex;
+    justify-content: space-around;
+    width: 70%;
+}
+
+.footer_informacion {
+    position: relative;
+    width: 20%;
+}
+
+.footer_informacion::after {
+    content: '';
+    position: absolute;
+    right: -25%;
+    top: 15%;
+    height: 12em;
+    width: 3px;
+    border-radius: 2px;
+    background-color: white;
+}
+
+
+.footer_parrafo {
+    font-size: 1.3em !important;
+    text-align: center;
+    font-weight: 600;
+    padding-right: 5%;
+    margin-right: 3%;
+}
+
+.footer_redessociales {
+    position: relative;
+    width: 20%;
+}
+
+.footer_redessociales::after {
+    content: '';
+    position: absolute;
+    right: -25%;
+    top: 15%;
+    height: 12em;
+    width: 3px;
+    border-radius: 2px;
+    background-color: white;
+}
+
+.footer_redessociales ul {
+    text-align: center;
+}
+
+.footer_redessociales ul li {
+    text-decoration: none;
+    font-size: 0.80em;
+    list-style: none;
+    font-weight: 600;
+}
+
+.footer_redessociales ul li i{
+    font-size: 2em;
+    padding-top: 0.30em;
+    margin: 0.10em;
+}
+
+.footer_redessociales ul li i a{
+    font-size: 1em;
+}
+
+.footer_metodosdepago {
+    position: relative;
+    width: 20%;
+}
+
+.footer_metodosdepago::after {
+    content: '';
+    position: absolute;
+    right: -25%;
+    top: 15%;
+    height: 12em;
+    width: 3px;
+    border-radius: 2px;
+    background-color: white;
+}
+
+.footer_metodosdepago i {
+    font-size: 2em;
+    padding-top: 0.30em;
+    margin: 0.10em;
+}
+
+.footer_metodosdepago li {
+    text-align: center;
+}
+
+.footer_copyright {
+    width: 20%;
+}
+/* Fin de Footer */

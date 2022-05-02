@@ -28,7 +28,7 @@ if (operacion2 === 1) {
     }
 } */
 
-// Estaba pensando en hacer alguna lista de productos para agregar
+// Inicio de Arrays y productos
 alert("Bienvenido a la mini-tienda en proceso!")
 
 class Productos {
@@ -44,14 +44,34 @@ class Productos {
     }
 }
 
-const CelularesAccesorios = [] ;
-CelularesAccesorios.push(new Productos("samsunga72", "128", "8" , "Octa Core", "72000"));
-CelularesAccesorios.push(new Productos("motoG9", "128" , "8" , "Snapdragon 730G", "56000"));
-CelularesAccesorios.push(new Productos("redminote10pro", "512" , "12" , "Snapdragon 732G","80000" ));
+
+const producto1 = new Productos ("Samsung A72", "128", "8" , "Octa Core", "72000")
+const producto2 = new Productos ("Moto G9", "128" , "8" , "Snapdragon 730G", "56000")
+const producto3 = new Productos ("Redminote 10 Pro", "512" , "12" , "Snapdragon 732G","80000")
+const producto4 = new Productos ("Samsung S22", "512", "12", "Snapdragon 8 Gen 1", "140000")
+
+let CelularesAccesorios = [producto1, producto2, producto3, producto4] ;
 
 for (const Productos of CelularesAccesorios) {
    Productos.PorcentajeOferta();
 }
+
+let divProductos = document.getElementById("divProductos")
+
+CelularesAccesorios.forEach(ProductosenArray => {
+    divProductos.innerHTML += `
+    <div class="main_productos">
+        <div class="main_productos_elementos">
+            <h2>Modelo: ${ProductosenArray.nombre}</h2>
+            <p>${ProductosenArray.espacio}GB Almacenamiento</p>
+            <p>${ProductosenArray.ram}GB Ram</p>
+            <p>Procesador: ${ProductosenArray.procesador}</p>
+            <p>${ProductosenArray.precio}$</p>
+        </div>
+        <input class="btn" type="submit" value="Comprar">
+    </div>
+    `
+});
 
 console.log(CelularesAccesorios)
 // console.log(CelularesAccesorios)

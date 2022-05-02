@@ -1,17 +1,63 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF 8">
+    <script src="https://kit.fontawesome.com/89cf8a655b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./normalize.css">
 <title>Javascript - Coderhouse Proyecto 😎 </title>
-<meta charset="UTF 8">
-<link rel="stylesheet" href="./style.css">
 </head>
-
-<body>
+<!-- Inicio de Navbar -->
+<!-- Inicio de body -->
+<body class="body">
+<header class="header">
+    <nav class="header_navbar">
+        <ul>
+            <li><a href="#"><i class="fa-solid fa-house-chimney"></i>Home</a></li>
+            <li><a href="#"><i class="fa-solid fa-credit-card"></i>Ofertas</a></li>
+            <li><a href="#"><i class="fa-solid fa-cart-shopping"></i>Carrito</a></li>
+            <li><a href="#"><i class="fa-solid fa-user"></i>Contacto</a></li>
+            <li><a><i class="fa-solid fa-magnifying-glass" class="header_navbar_search"></i>Buscar</a></li>
+        </ul>
+    </nav>
+</header>
+<!-- Fin de navbar -->
+<main class="main">
     <h1>Proyecto CoderHouse 😎</h1>
-        <p> Estas son las primeras entregas del proyecto , todavía no sé a que me voy a enfocar 🤔 </p> 
-        <p class="increase">Quiza puedo hacer algun ecommerce? 🤨</p>
-        <p class="increase"> Chequea la consola para ver los objetos en venta y sus precios con un 10% de descuento! 😜</p>
-    <script src="./script.js"></script>
+        <p class="increase">Salio ese Ecommerce de compras? 🤨</p>
+        <p class="increase"> Los productos se van a mostrar con un 10% de descuento!</p>
+        <div id="divProductos"></div>
+</main>
+<!--Inicio de footer  -->
+    <footer class="footer">
+        <div class="seccion_footer">
+            <div class="footer_informacion">
+                <h3> Sobre Nosotros</h3>
+                <p class="footer_parrafo"> Somos una empresa que nos apasiona la venta de celulares y accesorios! </p>
+            </div>
+            <div class="footer_metodosdepago">
+                <h4> Metodos de Pago</h4>
+                    <ul>
+                        <li><i class="fa-brands fa-cc-visa"></i></li>
+                        <li><i class="fa-brands fa-cc-mastercard"></i></li>
+                        <li><i class="fa-brands fa-cc-paypal"></i></li>
+                    </ul>
+            </div>
+            <div class="footer_redessociales">
+                <h5>Redes Sociales</h5>
+                <ul>
+                    <li><a href="#"></a><i class="fa-brands fa-instagram"></i>Instagram</li>
+                    <li><a href="#"></a><i class="fa-brands fa-twitter"></i>Twitter</li>
+                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a>Youtube</li>
+                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a>Facebook</li>
+                </ul>
+            </div>
+        </div>
+    <h5 class="footer_copyright"> X company - 2022 - Todos los derechos reservados.</h5>
+    </footer>
+<!-- Final de footer -->
+        <script src="./script.js"></script>
 </body> 
-
+<!-- Fin de body -->
 </html>
