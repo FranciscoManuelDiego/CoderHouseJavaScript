@@ -53,14 +53,16 @@ ul li a {
 
 header {
     background: linear-gradient(20deg, #f20085 0,#c4caef 98%);
-    width: 100%;
+    width: 105%;
     opacity: 92%;
+    height: 75px;
 }
 
 .header_navbar ul {
     display: flex;
     padding: 1em;
-    width: 100%;
+    margin-top: 0.40em;
+    margin-right: 15%;
 }
 
 .header_navbar ul li {
@@ -78,6 +80,21 @@ ul li a:hover {
     margin-right: -1%;
     padding: 0.20em;
     font-size: 1em;
+}
+
+#btn-busqueda {
+    border: none;
+    background-color: transparent;
+    text-decoration: none;
+    width: 5em;
+}
+
+#btn-busqueda::placeholder {
+    color: white;
+}
+
+#btn-busqueda:focus {
+    outline: none;
 }
 
 /* fin de seccion navbar */
@@ -102,12 +119,31 @@ ul li a:hover {
   
 /* Fin de contanido Grid */
 
-/* Inicio de Main */
+/* Inicio de Main Productos busqueda */
+.main_busqueda_productos {
+    height: 250px;
+    width: 600px;
+    background: rgb(53, 57, 65);
+    opacity: 95%;
+}
+
+.main_busqueda_productos_elementos h2 {
+    font-size: 1em;
+    color: white;
+}
+
+.main_busqueda_productos_elementos p {
+    color: white;
+    font-size: 1em;
+}
+
+/* Inicio de Main Productos */
 .main_productos {
     display: inline-flex;
     margin-right: 2%;
     margin-left: 2%;
     margin-top: 2%;
+    margin-bottom: 1%;
     padding: 1%;
     height: 400px;
     width:  250px;
@@ -120,32 +156,58 @@ ul li a:hover {
     opacity: 95%;
 }
 
+.main_productos_elementos h2 {
+    position: relative;
+    font-weight: 800;
+}
+
+.main_productos_elementos p {
+    font-weight: 600 ;
+    font-size: 1.10em;
+}
+
+.main_productos_elementos h2::after {
+    content: '';
+    position: absolute;
+    width: 55%;
+    height: 0.20em;
+    border-radius: 2px;
+    left: 23%;
+    bottom: 5%;
+    background: linear-gradient(20deg, #f20085 0,#c4caef 98%);
+}
+
 .main_productos_elementos  {
     position: absolute;
     text-align: center;
 }
 
-.btn {
+.btn-compra {
     position: relative;
-    top: 90%;
-    right: -55%;
-    height: 8%;
-    width: 45%;
+    top: 95%;
+    height: 9%;
+    width: 100%;
+    cursor: pointer;
     background: linear-gradient(20deg, #f20085 0,#c4caef 98%);
-    border-radius: 10%;
+    border-radius: 0.20em;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
     font-size: 1em;
     font-weight: 600;
 }
 
-.btn:hover {
-    transition-delay: 1s;
+.btn-compra:hover {
     background: linear-gradient(20deg, #be056a 0,#abb0cf 98%);
+    transition: all 0.5s;
 }
 /* Fin de main */
 
 /* Inicio de footer */
 .footer {
     display: flex;
+    margin-top: 2%;
+    height: 400px;
     width: 105%;
     background: linear-gradient(20deg, #f20085 0,#c4caef 98%);
     opacity: 92%;
@@ -162,21 +224,22 @@ h2, h3, h4, h5  {
 .seccion_footer {
     display: inline-flex;
     justify-content: space-around;
-    width: 70%;
+    width: 100%;
 }
 
 .footer_informacion {
     position: relative;
-    width: 20%;
+    width: 25%;
+    font-size: 1.30em;
 }
 
 .footer_informacion::after {
     content: '';
     position: absolute;
-    right: -25%;
+    right: -15%;
     top: 15%;
-    height: 12em;
-    width: 3px;
+    height: 11em;
+    width: 4px;
     border-radius: 2px;
     background-color: white;
 }
@@ -192,16 +255,16 @@ h2, h3, h4, h5  {
 
 .footer_redessociales {
     position: relative;
-    width: 20%;
+    width: 25%;
 }
 
 .footer_redessociales::after {
     content: '';
     position: absolute;
-    right: -25%;
+    right: -2%;
     top: 15%;
-    height: 12em;
-    width: 3px;
+    height: 15em;
+    width: 4px;
     border-radius: 2px;
     background-color: white;
 }
@@ -212,9 +275,9 @@ h2, h3, h4, h5  {
 
 .footer_redessociales ul li {
     text-decoration: none;
-    font-size: 0.80em;
+    font-size: 1em;
     list-style: none;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .footer_redessociales ul li i{
@@ -229,16 +292,20 @@ h2, h3, h4, h5  {
 
 .footer_metodosdepago {
     position: relative;
-    width: 20%;
+    width: 25%;
+}
+
+.footer_metodosdepago ul li i {
+    font-size: 2.70em;
 }
 
 .footer_metodosdepago::after {
     content: '';
     position: absolute;
-    right: -25%;
+    right: -15%;
     top: 15%;
-    height: 12em;
-    width: 3px;
+    height: 15em;
+    width: 4px;
     border-radius: 2px;
     background-color: white;
 }
@@ -254,6 +321,8 @@ h2, h3, h4, h5  {
 }
 
 .footer_copyright {
-    width: 20%;
+    width: 25%;
 }
 /* Fin de Footer */
+
+/* Seccion Media Queries */
