@@ -1,6 +1,6 @@
 
 // Seccion clases y arrays
-alert("Bienvenido a la mini-tienda en proceso!")
+Swal.fire("Bienvenido a la mini-tienda en proceso!")
 
 class Productos {
     constructor (id, nombre, espacio , ram, procesador , precio) {

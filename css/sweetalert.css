@@ -1,0 +1,17 @@
+.swal2-styled.swal2-confirm {
+    background-color: #f20085 !important;
+    width: 20em;
+}
+
+.swal2-styled.swal2-confirm:hover {
+    background-color: #9c0558 !important;
+}
+
+.swal2-icon .swal2-icon-content {
+    color: #95a3ff !important;
+}
+
+.swal2-icon.swal2-warning {
+    border-color: #95a3ff !important;
+    color: #95a3ff !important;
+}

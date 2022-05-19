@@ -6,6 +6,7 @@
     <script src="https://kit.fontawesome.com/89cf8a655b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/contactostyle.css">
     <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/sweetalert.css">
 <title>Javascript - Coderhouse Proyecto 😎 </title>
 </head>
 <!-- Inicio de Navbar -->
@@ -15,8 +16,8 @@
     <nav class="header_navbar">
         <a href="../index.html"><img class="logo" src="../images/Xcompany.png" alt="Logo"></a>
         <ul>
-            <li><a href="#"><i class="fa-solid fa-credit-card"></i>Nosotros</a></li>
-            <li><a href="#"><i class="fa-solid fa-cart-shopping"></i>Carrito</a></li>
+            <li id="nosotros"><a href="#"><i class="fa-solid fa-credit-card"></i>Nosotros</a></li>
+            <li id="carrito"><a href="#"><i class="fa-solid fa-cart-shopping"></i>Carrito</a></li>
             <li><a href="#"><i class="fa-solid fa-user"></i>Contacto</a></li>
             <li><a><i class="fa-solid fa-magnifying-glass" class="header_navbar_search"></i><input type="text" placeholder="Buscar"  id="btn-busqueda"></a></li>
         </ul>
@@ -30,8 +31,8 @@
         <label class="labelfont" for="Nombre">Nombre y Apellido</label> 
             <input class="labelinput" id="usuario" type="text" placeholder="Escribe tu Nombre y Apellido" required>
         <label class="labelfont" for="Mail">E-mail</label>
-            <input class="labelinput" id="email" type="text" placeholder="Escribe tu Mail">
-        <input class="main_seccion_formulario_boton" id="botonenviar" type="submit" value="Ingresar"></button>
+            <input class="labelinput" id="email" type="email" placeholder="Escribe tu Mail" required>
+        <input class="main_seccion_formulario_boton" id="botonenviar" type="submit" value="Ingresar" ></input>
     </form>
     </section>
 </main>
@@ -63,9 +64,10 @@
         </div>
     </footer>
 <!-- Final de footer -->
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="../js/alerts.js"></script>
         <script src="../js/script.js"></script>
         <script src="../js/contacto.js"></script>
-        <script src="../js/alerts.js"></script>
 </body> 
 <!-- Fin de body -->
 </html>
