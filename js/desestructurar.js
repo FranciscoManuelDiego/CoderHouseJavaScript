@@ -1,5 +1,5 @@
 let CelularesAccesoriosDesestructura= {
-    id : 6,
+    id : 7,
     nombre : "Samsung A72",
     espacio : "128 GB",
     ram : "4 GB",
@@ -20,3 +20,5 @@ const CelularesAccesoriosDesestructura2 = {
     ...CelularesAccesoriosDesestructura,
     bateria : "5000mAh",
 }
+
+console.log(CelularesAccesoriosDesestructura2)
