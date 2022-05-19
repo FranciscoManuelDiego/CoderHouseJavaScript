@@ -109,7 +109,7 @@ ul li a:hover {
 /* Contenido Grid */
 .body {  display: grid;
     grid-template-columns: 50% 50% 50%;
-    grid-template-rows: 6% 80% 21%;
+    grid-template-rows: 6% 100% 21%;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -126,9 +126,8 @@ ul li a:hover {
   
 /* Fin de contanido Grid */
 
+
 /* Inicio de Main Productos busqueda */
-
-
 .main_busqueda_productos {
     height: 250px;
     width: 600px;
@@ -146,70 +145,81 @@ ul li a:hover {
     font-size: 1em;
 }
 
-/* Inicio de Main Productos */
-.main_productos {
-    display: inline-flex;
-    margin-right: 2%;
-    margin-left: 2%;
-    margin-top: 2%;
-    margin-bottom: 1%;
-    padding: 1%;
-    height: 400px;
-    width:  250px;
-    border-radius: 5%;
-    box-shadow: 0 40px 70px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 3px solid rgb(29, 31, 35);
-    background: rgb(53, 57, 65);
+/* Inicio de Main formulario */
+.main {
+    background-image:url(../images/XiaomiBackground.jpg) ;
+    background: cover;
+    height: 110%;
+}
+
+.main_seccionformulario {
+    display: flex;
+    margin-top: 1em;
+    height: 60%;
+    width: 40em;
+    background-color: rgb(53, 57, 65);
+    margin-top: 5%;
+    margin-left: 10%;
     opacity: 95%;
+    z-index: 1;
 }
 
-.main_productos_elementos h2 {
-    position: relative;
-    font-weight: 800;
+
+.logoformulario {
+    height: 200px;
+    display: block;
+    margin-top: 25%;
+    padding-left: 10%;
 }
 
-.main_productos_elementos p {
-    font-weight: 600 ;
-    font-size: 1.10em;
-}
-
-.main_productos_elementos h2::after {
-    content: '';
-    position: absolute;
-    width: 55%;
-    height: 0.20em;
-    border-radius: 2px;
-    left: 23%;
-    bottom: 5%;
-    background: linear-gradient(20deg, #f20085 0,#c4caef 98%);
-}
-
-.main_productos_elementos  {
-    position: absolute;
-    text-align: center;
-}
-
-.btn-compra {
-    position: relative;
-    top: 95%;
-    height: 9%;
-    width: 100%;
-    cursor: pointer;
-    background: linear-gradient(20deg, #f20085 0,#c4caef 98%);
-    border-radius: 0.20em;
-    border: none;
-    outline: none;
-    box-sizing: border-box;
-    font-size: 1em;
+.labelfont {
+    display: block;
+    font-size: 1.70em;
     font-weight: 600;
+    color: white;
+    margin-top: 10%;
+    padding-left: 5%;
 }
 
-.btn-compra:hover {
-    background: linear-gradient(20deg, #be056a 0,#abb0cf 98%);
+.labelinput{
+    display: block;
+    padding: 0.25em;
+    font-size: 1.50em;
+    font-weight: 500;
+    margin-top:3%;
+    margin-left: 5%;
+    padding-left: 2%;
+    width: 20em;
+    background: transparent;
+    border-bottom: solid white 0.0em;
+    color: white;
+    text-decoration: none;  
+}
+
+.labelinpu::placeholder{
+    color:white;
+}
+
+.labelinput:focus {
+    border: #f20085;
+}
+
+.main_seccion_formulario_boton {
+    width: 15em;
+    font-size: 2em;
+    background: linear-gradient(20deg, #f20085 0,#c4caef 98%);
+    border: none;
+    border-radius: 5%;
+    margin-top: 20%;
+    margin-left: 5%;
     transition: all 0.5s;
 }
+
+.main_seccion_formulario_boton:hover {
+    cursor: pointer;
+    background: linear-gradient(20deg, #be056a 0,#abb0cf 98%);
+}
+
 /* Fin de main */
 
 /* Inicio de footer */

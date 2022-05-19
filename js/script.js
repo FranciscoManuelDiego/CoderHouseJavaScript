@@ -30,7 +30,6 @@ for (const Productos of CelularesAccesorios) {
    Productos.PorcentajeOferta();
 }
 
-
 // Seccion HTML dinamico
 let divProductos = document.getElementById("divProductos")
 
@@ -92,7 +91,6 @@ inputTexto.addEventListener('change', () =>{
 // Seccion de JSON y Storage
 
 let CelularesAccesoriosJSON = JSON.stringify(CelularesAccesorios)
-// console.log(CelularesAccesoriosJSON)
 
 localStorage.setItem("Productos y Caracterisiticas" , CelularesAccesoriosJSON)
 
