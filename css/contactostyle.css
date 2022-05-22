@@ -150,6 +150,7 @@ ul li a:hover {
     background-image:url(../images/XiaomiBackground.jpg) ;
     background: cover;
     height: 110%;
+    width: 105%;
 }
 
 .main_seccionformulario {

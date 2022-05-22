@@ -1,4 +1,18 @@
-/*.swiper {
-    width: 1000px;
-    height: 300px;
-  }*/
+.swiper {
+    background-color: grey;
+    width: 1600px;
+    height: 800px;
+    opacity: 80%;
+    font-size: 1.40em;
+    color: white;
+  }
+
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+  }

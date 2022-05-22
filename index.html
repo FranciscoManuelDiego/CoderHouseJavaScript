@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="./css/indexstyle.css">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/sweetalert.css">
-    <link rel="stylesheet" href="./css/swiper.css" >
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./css/swiper.css">
 <title>Javascript - Coderhouse Proyecto 😎 </title>
 </head>
 <!-- Inicio de Navbar -->
@@ -28,7 +28,22 @@
 <!-- Fin de navbar -->
 <!-- Inicio de Main -->
 <main class="main">
-        <div id="divProductos-busqueda"></div>
+    <!-- Slider main container -->
+<div class="swiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+    <div class="swiper-slide"><p>Apple Iphone 13 Mini</p><img src="./images/Iphone.jpg"></div>
+    <div class="swiper-slide"><p>Redmi Note 10 Pro</p><img src="./images/XiaomiNote10.jpg"></div>
+    <div class="swiper-slide"><p>Redmi Note 10 Pro</p><img src="./images/XiaomiBackground.jpg"></div>
+    <div class="swiper-slide"> <p>Samsung A72</p><img src="./images/Samsung.jpg"></div>
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
     <h1>Proyecto CoderHouse 😎</h1>
         <p class="increase">Salio ese Ecommerce de compras? 🤨</p>
         <p class="increase"> Los productos se van a mostrar con un 10% de descuento!</p>
@@ -64,9 +79,9 @@
     </footer>
 <!-- Final de footer -->
         <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+        <script src="./js/swiper.js"></script>
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script>src="./js/desestructurar.js"</script>
-        <script src="./js/swiper.js"></script>
         <script src="./js/alerts.js"></script>
         <script src="./js/script.js"></script>
 </body> 
