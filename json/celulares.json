@@ -1,0 +1,68 @@
+[
+    {
+        "id": 1,
+        "nombre": "Samsung A72" ,
+        "img": "./images/SamsungA72.jpg",
+        "espacio": "128",
+        "ram": "8" ,
+        "bateria": "5000 mAh" ,
+        "procesador": "Octa Core" ,
+        "precio": 72000 ,
+        "stock": 30
+    },
+    {
+        "id": 2,
+        "nombre":"Moto G9",
+        "img": "./images/MotoG9.webp" ,
+        "espacio": "128",
+        "ram": "8",
+        "bateria": "6000 mAh",
+        "procesador": "Snapdragon 730G",
+        "precio": 56000,
+        "stock": 40
+    },
+    {
+        "id": 3,
+        "nombre": "Redminote 10 Pro",
+        "img": "./images/XiaomiNote10.jpg",
+        "espacio": "512",
+        "ram": "12",
+        "bateria":"5020 mAh" ,
+        "procesador": "Snapdragon 732G",
+        "precio": 80000,
+        "stock": 25
+    },
+    {
+        "id": 4,
+        "nombre": "Samsung S22",
+        "img": "./images/Samsung.jpg",
+        "espacio": "512",
+        "ram": "12",
+        "bateria": "3700 mAh",
+        "procesador":"Snapdragon 8 Gen 1",
+        "precio": 140000,
+        "stock": 35
+    },
+    {
+        "id": 5,
+        "nombre": "Apple iPhone 13 mini",
+        "img": "./images/Iphone13Mini.jpeg" ,
+        "espacio": "512",
+        "ram": "4" ,
+        "bateria": "2406 mAh" ,
+        "procesador": "Apple A15 Bionic",
+        "precio": 250000,
+        "stock": 30
+    },
+    {
+        "id":6,
+        "nombre": "Google Pixel 6 Pro",
+        "img":"./images/GooglePixel6.webp" ,
+        "espacio": "128",
+        "ram":  "12",
+        "bateria": "5000 mAh" ,
+        "procesador": "Google Tenson Octa Core",
+        "precio": 280000,
+        "stock": 15
+    }
+]

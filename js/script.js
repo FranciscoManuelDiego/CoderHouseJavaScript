@@ -30,51 +30,78 @@ for (const Productos of CelularesAccesorios) {
    Productos.PorcentajeOferta();
 }
 
-// Seccion HTML dinamico
-let divProductos = document.getElementById("divProductos")
-
-CelularesAccesorios.forEach(ProductosenArray => {
-    divProductos.innerHTML += `
-    <div class="main_productos" id="producto${ProductosenArray.id}">
-        <div class="main_productos_elementos">
-            <h2>Modelo: ${ProductosenArray.nombre}</h2>
-            <p>${ProductosenArray.espacio}GB Almacenamiento</p>
-            <p>${ProductosenArray.ram}GB Ram</p>
-            <p>Procesador: ${ProductosenArray.procesador}</p>
-            <p>${ProductosenArray.precio}$</p>
-        </div>
-        <input id="btn${ProductosenArray.id}" class="btn-compra" type="submit" value="Añadir al Carrito">
-    </div>
-    `
-});
-
 console.log(CelularesAccesorios)
-
+// Seccion HTML dinamico y Fetch
+// CelularesAccesorios.forEach(ProductosenArray => {
+//     divProductos.innerHTML += `
+//     <div class="main_productos" id="producto${ProductosenArray.id}">
+//         <div class="main_productos_elementos">
+//             <h2>Modelo: ${ProductosenArray.nombre}</h2>
+//             <p>${ProductosenArray.espacio}GB Almacenamiento</p>
+//             <p>${ProductosenArray.ram}GB Ram</p>
+//             <p>Procesador: ${ProductosenArray.procesador}</p>
+//             <p>${ProductosenArray.precio}$</p>
+//         </div>
+//         <input id="btn${ProductosenArray.id}" class="btn-compra" type="submit" value="Añadir al Carrito">
+//     </div>
+//     `
+// });
+// Este es el carrito de Array que se manda 
+let carrito =[]
+let divProductos = document.getElementById("divProductos")
+// Aqui agregue un fetch donde retorno mis elementos de un json
+fetch('./json/celulares.json')
+.then(response => response.json())
+.then(celulares => {
+    let { id, nombre, espacio, ram, procesador, precio} = celulares
+    celulares.forEach((celulares) => {  
+        divProductos.innerHTML += `
+        <div class="main_productos" id="producto${celulares.id}">
+        <div class="main_productos_elementos">
+            <h2>Modelo: ${celulares.nombre}</h2>
+            <p>${celulares.espacio}GB Almacenamiento</p>
+            <p>${celulares.ram}GB Ram</p>
+            <p>Procesador: ${celulares.procesador}</p>
+            <p>${celulares.precio}$</p>
+        </div>
+        <input id="btn${celulares.id}" class="btn-compra" type="submit" value="Añadir al Carrito">
+    </div>
+        `
+    })
+    celulares.forEach(celulares => {
+        document.getElementById(`btn${celulares.id}`).addEventListener('click', () => {
+        console.log(celulares)
+        carrito.push(celulares)
+        localStorage.setItem("ProductosCarrito" , JSON.stringify(carrito))
+        })
+    })
+})
 // Seccion EventListeners
 
 // Seccion Listener-Carrito
 
-let carrito =[]
 
-CelularesAccesorios.forEach(ProductosenArray => {
-    document.getElementById(`btn${ProductosenArray.id}`).addEventListener('click', () => {
-    carrito.push(ProductosenArray)
-    localStorage.setItem("ProductosCarrito" , JSON.stringify(carrito))
-    })
-})
+
+
+// CelularesAccesorios.forEach(ProductosenArray => {
+//     document.getElementById(`btn${ProductosenArray.id}`).addEventListener('click', () => {
+//     console.log(ProductosenArray)
+//     carrito.push(ProductosenArray)
+//     localStorage.setItem("ProductosCarrito" , JSON.stringify(carrito))
+//     })
+// })
 
 // Seccion Listen-Buscador
 
 let inputTexto = document.getElementById("btn-busqueda")
 let divProductosBusqueda = document.getElementById("divProductos-busqueda")
 
-inputTexto.addEventListener('change', () =>{ 
+inputTexto.addEventListener('input', () =>{ 
     let buscador = inputTexto.value
     console.log(buscador.toUpperCase)
     let celularesFiltro = CelularesAccesorios.filter(productos => productos.nombre.includes(buscador.toUpperCase()))
-
     celularesFiltro.forEach (ProductosenArray => {
-        divProductosBusqueda.innerHTML += `
+        divProductosBusqueda.innerHTML =`
             <div class="main_busqueda_productos">
                 <div class="main_busqueda_productos_elementos">
                 <h2>Modelo: ${ProductosenArray.nombre}</h2>
@@ -85,12 +112,12 @@ inputTexto.addEventListener('change', () =>{
                 </div>
             </div>
         `
+        
     })
 })
 
 // Seccion de JSON y Storage
 
-let CelularesAccesoriosJSON = JSON.stringify(CelularesAccesorios)
 
-localStorage.setItem("Productos y Caracterisiticas" , CelularesAccesoriosJSON)
+
 
