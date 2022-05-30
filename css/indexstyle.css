@@ -13,8 +13,9 @@
 
 body {
     background-color: #1f2227;
-    
+    line-height: 1.5;
 }
+
 
 h1 {
     font-size: 2em;
@@ -23,14 +24,10 @@ h1 {
     font-weight: 400;
 }
 
-p {
-    font-size: 1em;
+.increase {
     text-align: center;
     padding: 1em;
     font-weight: 200;
-}
-
-.increase {
     font-size: 2.50em;
 }
 /* Fin de Aspectos Generales */
@@ -63,6 +60,7 @@ header {
     width: 105%;
     opacity: 92%;
     height: 80px;
+    position: relative;
 }
 
 .header_navbar ul {
@@ -103,12 +101,41 @@ ul li a:hover {
 #btn-busqueda:focus {
     outline: none;
 }
+/* Inicio de Main Productos busqueda */
+
+
+.main_busqueda_productos {
+    background: rgb(53, 57, 65);
+    height: 8em;
+    width: 20em;
+    display: flex;
+    align-items: flex-end;
+    top: 100%;
+    left: 70%;
+    position: absolute;
+    z-index: 10;
+}
+
+.main_busqueda_productos_elementos h2 {
+    font-size: 1em;
+    color: white;
+    text-align: left;
+}
+
+.main_busqueda_productos_elementos p {
+    color: white;
+    font-size: 1em;
+    text-align: left;
+    padding-left: 1em;
+    padding-bottom: 1em;
+}
 
 /* fin de seccion navbar */
+/* Fin de seccion buscador */
 
 /* Contenido Grid */
 .body {  display: grid;
-    grid-template-columns: 50% 50% 50%;
+    grid-template-columns: 50% 50%;
     grid-template-rows: 6% 80% 21%;
     gap: 0px 0px;
     grid-auto-flow: row;
@@ -126,53 +153,66 @@ ul li a:hover {
   
 /* Fin de contanido Grid */
 
-/* Inicio de Main Productos busqueda */
-
-
-.main_busqueda_productos {
-    height: 250px;
-    width: 600px;
-    background: rgb(53, 57, 65);
-    opacity: 95%;
-}
-
-.main_busqueda_productos_elementos h2 {
-    font-size: 1em;
-    color: white;
-}
-
-.main_busqueda_productos_elementos p {
-    color: white;
-    font-size: 1em;
-}
-
 /* Inicio de Main Productos */
+#divProductos {
+    margin-left: 8vw;
+    margin-right: 8vw;
+}
+
 .main_productos {
-    display: inline-flex;
-    margin-right: 2%;
-    margin-left: 2%;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    position: relative;
     margin-top: 2%;
-    margin-bottom: 1%;
-    padding: 1%;
+    margin-bottom: 2%;
+    margin-left: 2%;
     height: 400px;
     width:  250px;
+    box-sizing: border-box;
     border-radius: 5%;
     box-shadow: 0 40px 70px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(10px);
     border: 3px solid rgb(29, 31, 35);
-    background: rgb(53, 57, 65);
+    background: radial-gradient(rgb(20, 20, 20) 70%, #000 100%);
+    overflow: hidden;
     opacity: 95%;
+}
+
+
+.main_productos:hover img {
+    transform: scale(1.1);
+    opacity: 40%;
+    transition: all 0.2s ease-out;
+}
+
+.main_productos_elementos  {
+    position: absolute;
+    text-align: center;
+    top:0;
+    left: 0;
+    bottom: 0;
 }
 
 .main_productos_elementos h2 {
     position: relative;
     font-weight: 800;
+    font-size: 1.40em;
 }
 
 .main_productos_elementos p {
+    text-align: center;
+    padding: 3%;
     font-weight: 600 ;
     font-size: 1.10em;
+}
+
+.main_productos img{
+    height: 400px;
+    width: 250px;
+    object-fit: cover;
+    box-sizing: border-box;
 }
 
 .main_productos_elementos h2::after {
@@ -186,16 +226,11 @@ ul li a:hover {
     background: linear-gradient(20deg, #f20085 0,#c4caef 98%);
 }
 
-.main_productos_elementos  {
-    position: absolute;
-    text-align: center;
-}
-
 .btn-compra {
-    position: relative;
-    top: 95%;
-    height: 9%;
-    width: 100%;
+    position:relative;
+    bottom: 13%;
+    height: 10%;
+    width: 103%;
     cursor: pointer;
     background: linear-gradient(20deg, #f20085 0,#c4caef 98%);
     border-radius: 0.20em;
@@ -204,19 +239,22 @@ ul li a:hover {
     box-sizing: border-box;
     font-size: 1em;
     font-weight: 600;
+
 }
 
 .btn-compra:hover {
     background: linear-gradient(20deg, #be056a 0,#abb0cf 98%);
     transition: all 0.5s;
 }
+
+
 /* Fin de main */
 
 /* Inicio de footer */
 .footer {
     display: flex;
-    margin-top: 2%;
-    height: 400px;
+    margin-top:10vh;
+    height: 50vh;
     width: 105%;
     background: linear-gradient(20deg, #f20085 0,#c4caef 98%);
     opacity: 92%;

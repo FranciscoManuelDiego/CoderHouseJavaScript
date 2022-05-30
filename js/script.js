@@ -53,19 +53,20 @@ let divProductos = document.getElementById("divProductos")
 fetch('./json/celulares.json')
 .then(response => response.json())
 .then(celulares => {
-    let { id, nombre, espacio, ram, procesador, precio} = celulares
+    let { id,  nombre, img, espacio, ram, procesador, precio} = celulares
     celulares.forEach((celulares) => {  
         divProductos.innerHTML += `
         <div class="main_productos" id="producto${celulares.id}">
-        <div class="main_productos_elementos">
-            <h2>Modelo: ${celulares.nombre}</h2>
-            <p>${celulares.espacio}GB Almacenamiento</p>
-            <p>${celulares.ram}GB Ram</p>
-            <p>Procesador: ${celulares.procesador}</p>
-            <p>${celulares.precio}$</p>
+        <img src="${celulares.img}">
+            <div class="main_productos_elementos">
+                <h2>Modelo: ${celulares.nombre}</h2>
+                <p>${celulares.espacio}GB Almacenamiento</p>
+                <p>${celulares.ram}GB Ram</p>
+                <p>Procesador: ${celulares.procesador}</p>
+                <p>${celulares.precio}$</p>
+            </div>
+            <input id="btn${celulares.id}" class="btn-compra" type="submit" value="Añadir al Carrito">
         </div>
-        <input id="btn${celulares.id}" class="btn-compra" type="submit" value="Añadir al Carrito">
-    </div>
         `
     })
     celulares.forEach(celulares => {
@@ -98,25 +99,20 @@ let divProductosBusqueda = document.getElementById("divProductos-busqueda")
 
 inputTexto.addEventListener('input', () =>{ 
     let buscador = inputTexto.value
-    console.log(buscador.toUpperCase)
+    // console.log(buscador.toUpperCase)
     let celularesFiltro = CelularesAccesorios.filter(productos => productos.nombre.includes(buscador.toUpperCase()))
     celularesFiltro.forEach (ProductosenArray => {
-        divProductosBusqueda.innerHTML =`
+        divProductosBusqueda.innerHTML = ""
+        divProductosBusqueda.innerHTML =` 
             <div class="main_busqueda_productos">
                 <div class="main_busqueda_productos_elementos">
                 <h2>Modelo: ${ProductosenArray.nombre}</h2>
-                <p>${ProductosenArray.espacio}GB Almacenamiento</p>
-                <p>${ProductosenArray.ram}GB Ram</p>
-                <p>Procesador: ${ProductosenArray.procesador}</p>
                 <p>${ProductosenArray.precio}$</p>
                 </div>
             </div>
         `
-        
     })
 })
-
-// Seccion de JSON y Storage
 
 
 
