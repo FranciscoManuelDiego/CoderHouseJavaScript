@@ -2,73 +2,73 @@
     {
         "id": 1,
         "nombre": "Samsung A72" ,
-        "img": "./images/SamsungA72.jpg",
+        "img": "../images/SamsungA72.jpg",
         "espacio": "128",
         "ram": "8" ,
         "bateria": "5000 mAh" ,
         "procesador": "Octa Core" ,
         "precio": 72000 ,
         "stock": 30,
-        "link": "./html/SamsungA72.html"
+        "link": "../html/SamsungA72.html"
     },
     {
         "id": 2,
         "nombre":"Moto G9",
-        "img": "./images/MotoG9.webp" ,
+        "img": "../images/MotoG9.webp" ,
         "espacio": "128",
         "ram": "8",
         "bateria": "6000 mAh",
         "procesador": "Snapdragon 730G",
         "precio": 56000,
-        "stock": 40,
-        "link": "./html/MotoG9.html"
+        "stock": 40, 
+        "link": "../html/MotoG9.html"
     },
     {
         "id": 3,
         "nombre": "Redminote 10 Pro",
-        "img": "./images/XiaomiNote10.jpg",
+        "img": "../images/XiaomiNote10.jpg",
         "espacio": "512",
         "ram": "12",
         "bateria":"5020 mAh" ,
         "procesador": "Snapdragon 732G",
         "precio": 80000,
         "stock": 25,
-        "link": "./html/Redminote10Pro.html"
+        "link": "../html/Redminote10Pro.html"
     },
     {
         "id": 4,
         "nombre": "Samsung S22",
-        "img": "./images/Samsung.jpg",
+        "img": "../images/Samsung.jpg",
         "espacio": "512",
         "ram": "12",
         "bateria": "3700 mAh",
         "procesador":"Snapdragon 8 Gen 1",
         "precio": 140000,
         "stock": 35,
-        "link": "./html/SamsungS22.html"
+        "link": "../html/SamsungS22.html"
     },
     {
         "id": 5,
         "nombre": "Apple iPhone 13 mini",
-        "img": "./images/Iphone13Mini.jpeg" ,
+        "img": "../images/Iphone13Mini.jpeg" ,
         "espacio": "512",
         "ram": "4" ,
         "bateria": "2406 mAh" ,
         "procesador": "Apple A15 Bionic",
         "precio": 250000,
         "stock": 30,
-        "link": "./html/AppleIphone13mini.html"
+        "link": "../html/AppleIphone13mini.html"
     },
     {
         "id": 6,
         "nombre": "Google Pixel 6 Pro",
-        "img":" ./images/GooglePixel6.webp" ,
+        "img":" ../images/GooglePixel6.webp" ,
         "espacio": "128",
         "ram":  "12",
         "bateria": "5000 mAh" ,
         "procesador": "Google Tenson Octa Core",
         "precio": 280000,
         "stock": 15,
-        "link": "./html/GooglePixel6Pro.html"
+        "link": "../html/GooglePixel6Pro.html"
     }
 ]

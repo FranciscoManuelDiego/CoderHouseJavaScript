@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/sweetalert.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./css/swiper.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
 <title>Javascript - Coderhouse Proyecto 😎 </title>
 </head>
 <!-- Inicio de Navbar -->
@@ -17,29 +18,29 @@
 <header class="header">
     <nav class="header_navbar">
         <a href="#"><img class="logo" src="./images/Xcompany.png" alt="Logo"></a>
-        <ul>
+            <button class="hamburger" id="hamburger"> <i class="fas fa-bars"></i></button>
+        <ul class="nav-ul" id="nav-ul">
             <li id="nosotros"><a href="#"><i class="fa-solid fa-credit-card" id="nosotros"></i>Nosotros</a></li>
             <li id="carrito"><a href="#"><i class="fa-solid fa-cart-shopping" ></i>Carrito</a></li>
-            <li><a href="./html/contacto.html"><i class="fa-solid fa-user"></i>Contacto</a></li>
+            <li><a href="./html/contacto.html"><i class="fa-solid fa-user"></i>Storage</a></li>
             <li><a><i class="fa-solid fa-magnifying-glass" class="header_navbar_search"></i><input type="text" placeholder="Buscar"  id="btn-busqueda"></a></li>
+            <div id="divProductos-busqueda"></div>
         </ul>
     </nav>
-    <div id="divProductos-busqueda"></div>
 </header>
 <!-- Fin de navbar -->
 <!-- Inicio de Main -->
 <main class="main">
-    <h1>Proyecto CoderHouse 😎</h1>
-    <p class="increase">Ecommerce de compras! 🤨</p>
+    <h1>Bienvenido a mi Proyecto CoderHouse 😎</h1>
     <!-- Slider main container -->
 <div class="swiper">
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
       <!-- Slides -->
-    <div class="swiper-slide"><p>Apple Iphone 13 Mini</p> <button id="btn-swiper" class="swiper-slide-button" type="button" >Comprar<i class="fa-solid fa-arrow-up-right-from-square"></i></button><img src="./images/Iphone.jpg"></div>
-    <div class="swiper-slide"><p>Redmi Note 10 Pro</p> <button id="btn-swiper" class="swiper-slide-button" type="button" >Comprar<i class="fa-solid fa-arrow-up-right-from-square"></i></button><img src="./images/XiaomiNote10.jpg"></div>
-    <div class="swiper-slide"><p>Redmi Note 10 Pro</p> <button id="btn-swiper" class="swiper-slide-button" type="button" >Comprar<i class="fa-solid fa-arrow-up-right-from-square"></i></button><img src="./images/XiaomiBackground.jpg"></div>
-    <div class="swiper-slide"> <p>Samsung A72</p> <button id="btn-swiper" class="swiper-slide-button" type="button" >Comprar<i class="fa-solid fa-arrow-up-right-from-square"></i></button><img src="./images/Samsung.jpg"></div>
+    <div class="swiper-slide"><p>Apple Iphone 13 Mini</p><a id="swiperlink1" href="#"><button id="btn-swiper" class="swiper-slide-button" type="button" >Ver más<i class="fa-solid fa-arrow-up-right-from-square"></i></button></a><img src="./images/Iphone.jpg"></div>
+    <div class="swiper-slide"><p>Redmi Note 10 Pro</p><a id="swiperlink2" href="#"><button id="btn-swiper" class="swiper-slide-button" type="button" >Ver más<i class="fa-solid fa-arrow-up-right-from-square"></i></button></a><img src="./images/XiaomiBackground.jpg"></div>
+    <div class="swiper-slide"><p>Samsung A72</p><a id="swiperlink3" href="#"><button id="btn-swiper" class="swiper-slide-button" type="button" >Ver más<i class="fa-solid fa-arrow-up-right-from-square"></i></button></a><img src="./images/Samsung.jpg"></div>
+    <div class="swiper-slide"><p>Redmi Note 10 Pro</p><a id="swiperlink4" href="#"><button id="btn-swiper" class="swiper-slide-button" type="button" >Ver más<i class="fa-solid fa-arrow-up-right-from-square"></i></button></a><img src="./images/XiaomiBackground.jpg"></div>
     </div>
     <!-- If we need pagination -->
     <div class="swiper-pagination"></div>
@@ -52,38 +53,40 @@
 </main>
 <!-- Fin de Main -->
 <!--Inicio de footer  -->
-    <footer class="footer">
-        <div class="seccion_footer">
-            <div class="footer_informacion">
-                <h3> Sobre Nosotros</h3>
-                <p class="footer_parrafo"> Somos una empresa que nos apasiona la venta de celulares y accesorios! </p>
-            </div>
-            <div class="footer_metodosdepago">
-                <h4> Metodos de Pago</h4>
-                    <ul>
-                        <li><i class="fa-brands fa-cc-visa"></i></li>
-                        <li><i class="fa-brands fa-cc-mastercard"></i></li>
-                        <li><i class="fa-brands fa-cc-paypal"></i></li>
-                    </ul>
-            </div>
-            <div class="footer_redessociales">
-                <h5>Redes Sociales</h5>
-                <ul>
-                    <li><a href="#"></a><i class="fa-brands fa-instagram"></i>Instagram</li>
-                    <li><a href="#"></a><i class="fa-brands fa-twitter"></i>Twitter</li>
-                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a>Youtube</li>
-                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a>Facebook</li>
-                </ul>
-            </div>
-            <h5 class="footer_copyright"> X company - 2022 - Todos los derechos reservados.</h5>
+<footer class="footer">
+    <div class="seccion_footer">
+        <div class="footer_informacion">
+            <h3> Sobre Nosotros</h3>
+            <p class="footer_parrafo"> Somos una empresa que nos apasiona la venta de celulares y accesorios! </p>
         </div>
-    </footer>
+        <div class="footer_metodosdepago">
+            <h4> Metodos de Pago</h4>
+                <ul>
+                    <li><i class="fa-brands fa-cc-visa"></i></li>
+                    <li><i class="fa-brands fa-cc-mastercard"></i></li>
+                    <li><i class="fa-brands fa-cc-paypal"></i></li>
+                </ul>
+        </div>
+        <div class="footer_redessociales">
+            <h5>Redes Sociales</h5>
+            <ul>
+                <li id="rede1"><a href="#"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
+                <li id="rede2"><a href="#"><i class="fa-brands fa-twitter"></i>Twitter</a></li>
+                <li id="rede3"><a href="#"><i class="fa-brands fa-youtube"></i>Youtube</a></li>
+                <li id="rede4"><a href="#"><i class="fa-brands fa-facebook-f"></i>Facebook</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
 <!-- Final de footer -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
         <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
         <script src="./js/swiper.js"></script>
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="./js/alerts.js"></script>
-        <script src="./js/script.js"></script>
+        <script src="./js/indexscript.js"></script>
+        <script src="./js/alertify.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
 </body> 
 <!-- Fin de body -->
 </html>

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/contactostyle.css">
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/sweetalert.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
 <title>Javascript - Coderhouse Proyecto 😎 </title>
 </head>
 <!-- Inicio de Navbar -->
@@ -15,13 +16,15 @@
 <header class="header">
     <nav class="header_navbar">
         <a href="../index.html"><img class="logo" src="../images/Xcompany.png" alt="Logo"></a>
-        <ul>
+        <button class="hamburger" id="hamburger"> <i class="fas fa-bars"></i></button>
+        <ul class="nav-ul" id="nav-ul">
             <li id="nosotros"><a href="#"><i class="fa-solid fa-credit-card"></i>Nosotros</a></li>
             <li id="carrito"><a href="#"><i class="fa-solid fa-cart-shopping"></i>Carrito</a></li>
-            <li><a href="#"><i class="fa-solid fa-user"></i>Contacto</a></li>
+            <li><a href="#"><i class="fa-solid fa-user"></i>Storage</a></li>
             <li><a><i class="fa-solid fa-magnifying-glass" class="header_navbar_search"></i><input type="text" placeholder="Buscar"  id="btn-busqueda"></a></li>
         </ul>
     </nav>
+    <div id="divProductos-busqueda"></div>
 </header>
 <!-- Fin de navbar -->
 <main class="main">
@@ -32,41 +35,41 @@
             <input class="labelinput" id="usuario" type="text" placeholder="Escribe tu Nombre y Apellido" required>
         <label class="labelfont" for="Mail">E-mail</label>
             <input class="labelinput" id="email" type="email" placeholder="Escribe tu Mail" required>
-        <input class="main_seccion_formulario_boton" id="botonenviar" type="submit" value="Ingresar" ></input>
+        <input class="main_seccion_formulario_boton" id="botonenviar" type="submit" value="Almacenar en Storage" ></input>
     </form>
     </section>
 </main>
 <!--Inicio de footer  -->
-    <footer class="footer">
-        <div class="seccion_footer">
-            <div class="footer_informacion">
-                <h3> Sobre Nosotros</h3>
-                <p class="footer_parrafo"> Somos una empresa que nos apasiona la venta de celulares y accesorios! </p>
-            </div>
-            <div class="footer_metodosdepago">
-                <h4> Metodos de Pago</h4>
-                    <ul>
-                        <li><i class="fa-brands fa-cc-visa"></i></li>
-                        <li><i class="fa-brands fa-cc-mastercard"></i></li>
-                        <li><i class="fa-brands fa-cc-paypal"></i></li>
-                    </ul>
-            </div>
-            <div class="footer_redessociales">
-                <h5>Redes Sociales</h5>
-                <ul>
-                    <li><a href="#"></a><i class="fa-brands fa-instagram"></i>Instagram</li>
-                    <li><a href="#"></a><i class="fa-brands fa-twitter"></i>Twitter</li>
-                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a>Youtube</li>
-                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a>Facebook</li>
-                </ul>
-            </div>
-            <h5 class="footer_copyright"> X company - 2022 - Todos los derechos reservados.</h5>
+<footer class="footer">
+    <div class="seccion_footer">
+        <div class="footer_informacion">
+            <h3> Sobre Nosotros</h3>
+            <p class="footer_parrafo"> Somos una empresa que nos apasiona la venta de celulares y accesorios! </p>
         </div>
-    </footer>
+        <div class="footer_metodosdepago">
+            <h4> Metodos de Pago</h4>
+                <ul>
+                    <li><i class="fa-brands fa-cc-visa"></i></li>
+                    <li><i class="fa-brands fa-cc-mastercard"></i></li>
+                    <li><i class="fa-brands fa-cc-paypal"></i></li>
+                </ul>
+        </div>
+        <div class="footer_redessociales">
+            <h5>Redes Sociales</h5>
+            <ul>
+                <li id="rede1"><a href="#"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
+                <li id="rede2"><a href="#"><i class="fa-brands fa-twitter"></i>Twitter</a></li>
+                <li id="rede3"><a href="#"><i class="fa-brands fa-youtube"></i>Youtube</a></li>
+                <li id="rede4"><a href="#"><i class="fa-brands fa-facebook-f"></i>Facebook</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
 <!-- Final de footer -->
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
         <script src="../js/alerts.js"></script>
-        <script src="../js/script.js"></script>
+        <script src="../js/contactoscript.js"></script>
         <script src="../js/contacto.js"></script>
 </body> 
 <!-- Fin de body -->

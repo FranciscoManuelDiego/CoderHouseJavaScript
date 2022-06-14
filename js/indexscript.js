@@ -53,7 +53,7 @@ let divProductos = document.getElementById("divProductos")
 fetch('./json/celulares.json')
 .then(response => response.json())
 .then(celulares => {
-    let { id,  nombre, img, espacio, ram, procesador, precio} = celulares
+    let {id,  nombre, img, espacio, ram, procesador, precio} = celulares
     celulares.forEach((celulares) => {  
         divProductos.innerHTML += `
         <div class="main_productos" id="producto${celulares.id}">
@@ -71,6 +71,7 @@ fetch('./json/celulares.json')
     })
     celulares.forEach(celulares => {
         document.getElementById(`btn${celulares.id}`).addEventListener('click', () => {
+        alertify.success('Agregaste un producto al carrito🤩');
         console.log(celulares)
         carrito.push(celulares)
         localStorage.setItem("ProductosCarrito" , JSON.stringify(carrito))
@@ -79,10 +80,15 @@ fetch('./json/celulares.json')
 })
 // Seccion EventListeners
 
+// Seccion Menu hamburguesa
+const Menu = document.getElementById("hamburger") ;
+const navbar = document.getElementById("nav-ul");
+
+Menu.addEventListener('click', () => {
+    navbar.classList.toggle('show');
+})
+
 // Seccion Listener-Carrito
-
-
-
 
 // CelularesAccesorios.forEach(ProductosenArray => {
 //     document.getElementById(`btn${ProductosenArray.id}`).addEventListener('click', () => {
@@ -97,23 +103,52 @@ fetch('./json/celulares.json')
 let inputTexto = document.getElementById("btn-busqueda")
 let divProductosBusqueda = document.getElementById("divProductos-busqueda")
 
-inputTexto.addEventListener('input', () =>{ 
+// inputTexto.addEventListener('input', () =>{ 
+//     let buscador = inputTexto.value
+//     // console.log(buscador.toUpperCase)
+//     let celularesFiltro = CelularesAccesorios.filter(productos => productos.nombre.includes(buscador.toUpperCase()))
+//         if (inputTexto.value === ""){ 
+//             divProductosBusqueda.innerHTML ="";
+//         } else {
+//             celularesFiltro.forEach (ProductosenArray => {
+//                 divProductosBusqueda.innerHTML +=` 
+//                     <div class="main_busqueda_productos">
+//                         <div class="main_busqueda_productos_elementos">
+//                         <h2>Modelo: ${ProductosenArray.nombre}</h2>
+//                         <p>${ProductosenArray.precio}$</p>
+//                         </div>
+//                     </div>
+//                 `
+//             })
+//         }
+// })
+let carritobusqueda = []
+fetch('./json/celulares.json')
+.then(response => response.json())
+.then(celulares => {
+    let {id,  nombre, img, precio, link} = celulares
+    inputTexto.addEventListener('input', () =>{ 
     let buscador = inputTexto.value
     // console.log(buscador.toUpperCase)
-    let celularesFiltro = CelularesAccesorios.filter(productos => productos.nombre.includes(buscador.toUpperCase()))
-    celularesFiltro.forEach (ProductosenArray => {
-        divProductosBusqueda.innerHTML = ""
-        divProductosBusqueda.innerHTML =` 
-            <div class="main_busqueda_productos">
-                <div class="main_busqueda_productos_elementos">
-                <h2>Modelo: ${ProductosenArray.nombre}</h2>
-                <p>${ProductosenArray.precio}$</p>
+    let celularesFiltro = celulares.filter(celulares => celulares.nombre.includes(buscador.toUpperCase()))
+    if (inputTexto.value === ""){ 
+        divProductosBusqueda.innerHTML ="";
+    } else {
+        celularesFiltro.forEach((celulares) => {
+            divProductosBusqueda.innerHTML =` 
+                <div class="main_busqueda_productos">
+                    <div class="main_busqueda_productos_elementos">
+                    <h2>Modelo: ${celulares.nombre}</h2>
+                    <p>${celulares.precio}$</p>
+                    <img src="${celulares.img}">
+                    <a id="busqueda_pages" href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i>Ver más</a>
+                    </div>
                 </div>
-            </div>
-        `
+            `
+            document.getElementById('busqueda_pages').addEventListener('click', ()=>{ 
+                alertify.error('Link no encontrado😶 . Estamos Trabajando sobre esta sección😅')
+                })
+            })
+        }
     })
 })
-
-
-
-
