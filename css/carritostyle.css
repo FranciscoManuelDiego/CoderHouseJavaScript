@@ -215,8 +215,8 @@ ul li a:hover {
 /* Inicio de footer */
 .footer {
     display: flex;
-    margin-top:10vh;
-    height: 50vh;
+    margin-top:20vh;
+    height: 55vh;
     width: 110%;
     background: linear-gradient(20deg, #f20085 0,#c4caef 98%);
     opacity: 92%;
