@@ -30,7 +30,7 @@ for (const Productos of CelularesAccesorios) {
    Productos.PorcentajeOferta();
 }
 
-console.log(CelularesAccesorios)
+// console.log(CelularesAccesorios)
 // Seccion HTML dinamico y Fetch
 // CelularesAccesorios.forEach(ProductosenArray => {
 //     divProductos.innerHTML += `
@@ -122,7 +122,6 @@ let divProductosBusqueda = document.getElementById("divProductos-busqueda")
 //             })
 //         }
 // })
-let carritobusqueda = []
 fetch('./json/celulares.json')
 .then(response => response.json())
 .then(celulares => {

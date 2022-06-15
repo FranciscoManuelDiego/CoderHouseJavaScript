@@ -1,0 +1,443 @@
+@import url('https://fonts.googleapis.com/css2?family=Play&family=Poppins:ital,wght@0,700;1,700&family=Ropa+Sans&display=swap');
+/* Aspectos Generales */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: whitesmoke;
+    font-family: 'Play', sans-serif;
+}
+button {
+    background: transparent;
+}
+
+body {
+    background-color: #1f2227;
+    
+}
+
+h1 {
+    font-size: 2em;
+    text-align: center;
+    padding: 1em;
+    font-weight: 400;
+}
+
+p {
+    font-size: 1em;
+    text-align: center;
+    padding: 1em;
+    font-weight: 200;
+}
+
+.increase {
+    font-size: 2.50em;
+}
+/* Fin de Aspectos Generales */
+
+/* Contenido navbar  */
+.logo {
+    position: absolute;
+    height: 75px;
+    top: 0.20%;
+    left: 3%;
+}
+
+.hamburger {
+    display: none;
+    border: 0;
+    cursor: pointer;
+    color: white;
+    font-size: 40px;
+    position: absolute;
+    margin-top: 0.6em;
+    right: 15vw ;
+}
+
+i {
+    color: white;
+}
+
+ul li {
+    list-style: none;
+}
+
+ul li a {
+    text-decoration: none;
+    font-size: 1.10em;
+    list-style: none;
+    font-weight: 600;
+}
+
+header {
+    background: linear-gradient(20deg, #f20085 0,#c4caef 98%);
+    width: 110%;
+    opacity: 92%;
+    height: 80px;
+    position: relative;
+}
+
+.nav-ul {
+    display: flex;
+    padding: 1em;
+    margin-left: 10%;
+}
+
+.header_navbar ul li {
+    display: inline-flex;
+    padding-left: 5%;
+    margin-left: 8%;
+    margin-top: 0.4em;
+}
+
+ul li a:hover {
+    border-bottom: solid white 0.10em;
+    border-radius: 1%;
+}
+
+.header_navbar ul li a i {
+    margin-right: -1%;
+    padding: 0.20em;
+    font-size: 1em;
+}
+
+#btn-busqueda {
+    border: none;
+    background-color: transparent;
+    text-decoration: none;
+    width: 5em;
+}
+
+#btn-busqueda::placeholder {
+    color: white;
+}
+
+#btn-busqueda:focus {
+    outline: none;
+}
+/* Inicio de Main Productos busqueda */
+
+.main_busqueda_productos {
+    background: rgb(53, 57, 65);
+    display: block;
+    height: 9em;
+    width: 20em;
+    top: 100%;
+    left: 60%;
+    position: absolute;
+    z-index: 10;
+    opacity: 100%;
+}
+
+.main_busqueda_productos_elementos {
+    position: relative;
+}
+
+.main_busqueda_productos_elementos h2 {
+    font-size: 1em;
+    color: white;
+    text-align: left;
+    width: 140px;
+    padding-bottom: 0.50em;
+}
+
+.main_busqueda_productos_elementos p {
+    color: white;
+    font-size: 1em;
+    text-align: left;
+    padding-left: 1em;
+    padding-bottom: 0.50em;
+}
+
+
+.main_busqueda_productos_elementos img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 0.60em;
+    width: 150px;
+    height: 125px;
+    object-fit: contain;
+    z-index: -1;
+}
+
+.main_busqueda_productos_elementos a {
+    color: white;
+    font-size: 1em;
+    text-align: left;
+    padding-left: 1em;
+    padding-bottom: 0.50em;
+}
+
+/* fin de seccion navbar */
+/* Fin de seccion buscador */
+
+/* Inicio de elementos carrito */ 
+#alinear {
+    font-size: 2em;
+    margin-left: 2%;
+    text-align: left;
+}
+.productos_carrito {
+    display: flex;
+    flex-direction: column;
+}
+
+.productos_carrito_tarjetas{
+    position: relative;
+    margin-left: 2%;
+    margin-top: 2%;
+    text-align: left;
+    background: rgb(53, 57, 65);
+    display: block;
+    height: 10em;
+    width: 60vw;
+}
+
+.productos_carrito_tarjetas p {
+    margin-left: 3%;
+    text-align: left;
+}
+
+.productos_carrito_tarjetas h3 {
+    margin-left: 2%;
+    text-align: left;
+}
+
+.image_contain {
+    position: absolute;
+    top: 10%;
+    left:70%;
+    object-fit: contain;
+    height: 8em;
+}
+/* Fin de seccion carrito */
+/* Inicio de footer */
+.footer {
+    display: flex;
+    margin-top:10vh;
+    height: 50vh;
+    width: 110%;
+    background: linear-gradient(20deg, #f20085 0,#c4caef 98%);
+    opacity: 92%;
+}
+
+h2, h3, h4, h5  {
+    font-size: 1.30em ;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    font-weight: 600;
+}
+
+.seccion_footer {
+    display: inline-flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.footer_informacion {
+    position: relative;
+    width: 25%;
+}
+
+.footer_informacion::after {
+    content: '';
+    position: absolute;
+    right: -15%;
+    top: 15%;
+    height: 15em;
+    width: 4px;
+    border-radius: 2px;
+    background-color: white;
+}
+
+
+.footer_parrafo{
+    font-size: 1.3em !important;
+    text-align: center;
+    font-weight: 600;
+    padding-right: 5%;
+    margin-left: 3%;
+}
+
+.footer_redessociales {
+    position: relative;
+    width: 25%;
+}
+
+.footer_redessociales ul {
+    text-align: center;
+}
+
+.footer_redessociales ul li {
+    text-decoration: none;
+    font-size: 1em;
+    list-style: none;
+    font-weight: 700;
+}
+
+.footer_redessociales ul li i{
+    font-size: 2em;
+    padding-top: 0.30em;
+    margin: 0.10em;
+}
+
+.footer_redessociales ul li i a{
+    font-size: 1em;
+}
+
+.footer_metodosdepago {
+    position: relative;
+    width: 25%;
+}
+
+.footer_metodosdepago ul li i {
+    font-size: 2.70em;
+}
+
+.footer_metodosdepago::after {
+    content: '';
+    position: absolute;
+    right: -15%;
+    top: 15%;
+    height: 15em;
+    width: 4px;
+    border-radius: 2px;
+    background-color: white;
+}
+
+.footer_metodosdepago i {
+    font-size: 2em;
+    padding-top: 0.30em;
+    margin: 0.10em;
+}
+
+.footer_metodosdepago li {
+    text-align: center;
+}
+
+.footer_copyright_texto {
+    position: relative;
+    width: 100%;
+}
+
+.footer_copyright_texto h5 {
+    width: 100%;
+    text-align: center;
+}
+/* Fin de Footer */
+
+/* Seccion Media Queries */
+
+/* Navbar Responsive */
+@media screen and (max-width: 800px) {
+    .nav-ul {
+        display: none;
+        flex-direction: column;
+        background: linear-gradient(20deg, #f20085 0,#c4caef 98%);
+        width: 10em;
+        height: 8em;
+    }
+    .hamburger{
+        display: block;
+    }
+    .nav-ul.show {
+        position: absolute;
+        right: 5vw;
+        top: 80px;
+        display: flex;
+        z-index: 1;
+    }
+    .main_busqueda_productos {
+        width: 18em;
+        top: 0;
+        left: -150%;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .main_busqueda_productos {
+        top: 0;
+        left: -75%;
+        height: 10em;
+        width: 9em;
+    }
+    .main_busqueda_productos_elementos {
+        position: relative;
+    }
+    .main_busqueda_productos_elementos h2 {
+        font-size: 0.70em;
+        color: white;
+        width: 60px;
+        padding-bottom: 0.40em;
+    }
+    
+    .main_busqueda_productos_elementos p {
+        font-size: 0.70em;
+        text-align: left;
+        padding-left: 1em;
+        padding-bottom: 0.40em;
+        font-weight: 600;
+    }
+    
+    .main_busqueda_productos_elementos img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-top: 0.60em;
+        width: 80px;
+        height: 70px;
+        object-fit: contain;
+        z-index: -1;
+    }
+    
+    .main_busqueda_productos_elementos a {
+        color: white;
+        font-size: 0.80em;
+        text-align: left;
+        padding-left: 1em;
+        padding-bottom: 0.30em;
+    }
+}
+/* Fin navbar responsive */
+
+/* Footer Responsive*/
+@media  (max-width:1000px) and (min-width: 100px) {
+    .footer {
+        height: 700px;
+    }
+    .seccion_footer {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+    }
+    .footer_informacion {
+        width: 50%;
+    }
+    .footer_informacion::after {
+        right: -2%;
+        height: 80%;
+    }
+    .footer_redessociales {
+        width: 50%;
+        text-align: center;
+    }
+    .footer_redessociales:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 3%;
+        height: 4px;
+        width: 100%;
+        border-radius: 2px;
+        background-color: white;
+    }
+    .footer_metodosdepago {
+        width: 50%;
+    }
+    .footer_metodosdepago::after {
+        content: none;
+    }
+}
+/* Fin de footer responsive */

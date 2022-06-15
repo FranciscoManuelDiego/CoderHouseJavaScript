@@ -1,7 +1,6 @@
 
 // Seccion clases y arrays
 
-
 class Productos {
     constructor (id, nombre, espacio , ram, procesador , precio) {
         this.id = id;
@@ -73,4 +72,22 @@ fetch('../json/celulares2.json')
             })
         }
     })
+})
+
+// Seccion carrito
+
+let divPrdouctosCarrito = document.getElementById("carritoelementos")
+let carritoStorage = JSON.parse(localStorage.getItem("ProductosCarrito")) 
+console.log(carritoStorage)
+
+carritoStorage.forEach((carritoStorage) => {
+    divPrdouctosCarrito.innerHTML += `
+        <div class="productos_carrito">
+            <div class="productos_carrito_tarjetas">
+                <h3>Modelo: ${carritoStorage.nombre}</h3>
+                <p>Precio: $${carritoStorage.precio}</p>
+                <img class="image_contain" src="../images/phoneSymbol.png">
+            </div>
+        </div>
+    `
 })
