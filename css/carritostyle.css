@@ -172,12 +172,32 @@ ul li a:hover {
 /* fin de seccion navbar */
 /* Fin de seccion buscador */
 
+/* Seccin Main */
+.main {
+    display: flex;
+}
+
+.columnaproductos {
+    flex-direction: column;
+}
+
+.main_compra {
+    left: 0;
+    position: relative;
+    background: rgb(53, 57, 65);
+    margin-left: 2%;
+    margin-top: 2%;
+    height: 10em;
+    width: 60vw;
+}
+
 /* Inicio de elementos carrito */ 
 #alinear {
     font-size: 2em;
     margin-left: 2%;
     text-align: left;
 }
+
 .productos_carrito {
     display: flex;
     flex-direction: column;

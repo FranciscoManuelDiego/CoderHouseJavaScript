@@ -91,3 +91,14 @@ carritoStorage.forEach((carritoStorage) => {
         </div>
     `
 })
+
+let productosCompra = document.getElementById("mainCompra")
+carritoStorage.forEach((producto) => {
+    let sumaProductos = carritoStorage.reduce((sum, value) => (typeof value.precio == "number" ? sum + value.precio : sum), 0) ;
+    productosCompra.innerHTML = `
+        <div class="precio">
+            <h2>Seccion Compra</h2>
+            <p>Precio total: ${sumaProductos}</p>
+        </div>
+    `
+})
