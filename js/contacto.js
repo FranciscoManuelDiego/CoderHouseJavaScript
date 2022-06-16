@@ -7,7 +7,7 @@ formulario.addEventListener('submit', (e)=> {
     let usuario = document.getElementById('usuario').value
     let email = document.getElementById('email').value
     let usuarioIngresado = {usuario: usuario,  email: email}
-    if (usuario === "" && email=== "") {
+    if (usuario === "" && email === "") {
         Swal.fire({
             icon: 'error',
             title: ':(',

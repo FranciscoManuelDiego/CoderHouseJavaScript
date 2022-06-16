@@ -45,5 +45,3 @@ Swal.fire({
 
 
 
-// Esto no funciona porque seguramente tiene un error re contra boludo 
-

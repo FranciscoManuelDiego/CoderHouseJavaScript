@@ -182,13 +182,33 @@ ul li a:hover {
 }
 
 .main_compra {
-    left: 0;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
     background: rgb(53, 57, 65);
     margin-left: 2%;
     margin-top: 2%;
-    height: 10em;
+    height: 12em;
     width: 60vw;
+}
+
+.btn-compra {
+    text-align: center;
+    padding: 0.20em;
+    margin-top: 2%;
+    width: 5em;
+    font-size: 1.50em;
+    background: linear-gradient(20deg, #f20085 0,#c4caef 98%);
+    border: none;
+    border-radius: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.btn-compra:hover{
+background: linear-gradient(20deg, #be056a 0,#abb0cf 98%);
 }
 
 /* Inicio de elementos carrito */ 

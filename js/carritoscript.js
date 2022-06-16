@@ -99,6 +99,19 @@ carritoStorage.forEach((producto) => {
         <div class="precio">
             <h2>Seccion Compra</h2>
             <p>Precio total: ${sumaProductos}</p>
+            <input id="botonCompra" class="btn-compra" type="submit" value="Comprar">
         </div>
     `
+    document.getElementById("botonCompra").addEventListener('click', () => {
+        Swal.fire({
+            icon: 'success',
+            title: ':)',
+            text: 'Compraste tus productos!',
+        })
+        localStorage.clear()
+        setTimeout(() => {
+            location.reload(true)
+        }, 3500);
+    })
 })
+
