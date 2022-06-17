@@ -219,7 +219,7 @@ ul li a:hover {
     margin-top:3%;
     margin-left: 5%;
     padding-left: 2%;
-    width: 20em;
+    width: 18em;
     background: transparent;
     border-bottom: solid white 0.0em;
     color: white;
@@ -444,7 +444,7 @@ h2, h3, h4, h5  {
 /* Fin navbar responsive */
 
 /* Formulario Responsive */
-@media (max-width: 900px) and (min-width:500px) {
+@media (max-width: 900px) {
     .main_seccionformulario {
         width: 32em;
     }
@@ -453,12 +453,34 @@ h2, h3, h4, h5  {
     }
 }
 
-@media (max-width: 500px) and (min-width: 200px) {
+
+@media (max-width: 654px) and (min-width: 150px) {
     .main_seccionformulario {
-        width: 25em;
+        width: 22em;
+    }
+    .labelinput {
+        font-size: 1.40em;
+        width: 13em;
     }
     .main_seccion_formulario_boton {
-        width: 11em;
+        font-size: 1.40em;
+        padding: 2%;
+    }
+}
+
+@media (max-width: 450px) {
+    .logoformulario {
+        height: 150px;
+    }
+    .main_seccionformulario {
+        width: 15em;
+    }
+    .labelinput {
+        font-size: 1.30em;
+        width: 10em;
+    }
+    .main_seccion_formulario_boton {
+        font-size: 1.10em;
     }
 }
 
