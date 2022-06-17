@@ -396,6 +396,23 @@ h2, h3, h4, h5  {
     }
 }
 
+@media screen and (max-width: 800px) {
+    .productos_carrito_tarjetas h3 {
+        font-size: 1.20em;
+        width: 25vw;
+    }
+    .image_contain {
+        height: 6em;
+        left: 60%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .image_contain {
+        height: 5.60em;
+    }
+}
+
 @media screen and (max-width: 460px) {
     .main_busqueda_productos {
         top: 0;
